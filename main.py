@@ -5,13 +5,14 @@ import datetime
 import re
 from flask import Flask
 import threading
+import os
 
 # 1. Tạo Web Server giả lập giữ Render Free 24/7
 app = Flask('')
 
 @app.route('/')
 def home():
-    return "Bot đang chạy 24/7!"
+    return "Bot dang chay 24/7!"
 
 def run_web():
     app.run(host='0.0.0.0', port=8080)
@@ -20,10 +21,9 @@ def keep_alive():
     t = threading.Thread(target=run_web)
     t.start()
 
-# 2. ĐIỀN KEY & TOKEN CỦA BÁC VÀO DƯỚI ĐÂY:
+# 2. LẤY KEY VÀ TOKEN TỪ MÔI TRƯỜNG BẢO MẬT (ENVIRONMENT)
 GROQ_API_KEY = os.getenv("GROQ_API_KEY")
 DISCORD_TOKEN = os.getenv("DISCORD_TOKEN")
-
 # Mute phạt 5 phút
 MUTE_DURATION_MINUTES = 5 
 
