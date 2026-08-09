@@ -38,10 +38,13 @@ BAD_WORDS = [
     r"\bcon chó\b", r"\bsúc vật\b", r"\bngu học\b", r"\bđồ ngu\b"
 ]
 groq_client = None
+
 intents = discord.Intents.default()
 intents.message_content = True
 intents.members = True
 bot = commands.Bot(command_prefix="!", intents=intents)
+
+@bot.event
 async def on_ready():
     print(f"🤖 AI Bot + AutoMod đã online: {bot.user}")
 
