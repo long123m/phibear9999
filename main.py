@@ -37,12 +37,13 @@ BAD_WORDS = [
     r"\blol\b", r"\bbuồi\b", r"\bbuoi\b", r"\bóc chó\b", r"\bchó đẻ\b",
     r"\bcon chó\b", r"\bsúc vật\b", r"\bngu học\b", r"\bđồ ngu\b"
 ]
-
-try:
-    groq_client = Groq(api_key=GROQ_API_KEY)
-except Exception as e:
-    print(f"⚠️ Lỗi khởi tạo Groq API: {e}")
-    groq_client = None
+# Tạo client Groq an toàn
+groq_client = None
+if GROQ_API_KEY:
+    try:
+        groq_client = Groq(api_key=GROQ_API_KEY)
+    except Exception as e:
+        print(f"⚠️ Không thể kết nối Groq: {e}")
 intents = discord.Intents.default()
 intents.message_content = True
 intents.members = True
