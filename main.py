@@ -21,8 +21,8 @@ def keep_alive():
     t.start()
 
 # 2. ĐIỀN KEY & TOKEN CỦA BÁC VÀO DƯỚI ĐÂY:
-GROQ_API_KEY = "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"
-DISCORD_TOKEN = "MTUzNTk5NDI1NjI5NTA3NTk1MQ.GoFuZw.iGoF9gVIERAPnr8SFhDCdxwz5q0SqEO_PAUoNs"
+GROQ_API_KEY = os.getenv("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")
+DISCORD_TOKEN = os.getenv("MTUzNTk5NDI1NjI5NTA3NTk1MQ.Ga4eWw.uvubIHn8MGKWTX2lQHDB7VNRmOoSyxzrhuYuXY")
 
 # Mute phạt 5 phút
 MUTE_DURATION_MINUTES = 5 
