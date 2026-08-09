@@ -21,10 +21,10 @@ def keep_alive():
     t.start()
 
 # 1. Dán Groq API Key của bác vào đây (bắt đầu bằng gsk_...)
-GROQ_API_KEY = "DÁN_GROQ_API_KEY_VÀO_ĐÂY"
+GROQ_API_KEY = "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"
 
 # 2. Dán Discord Bot Token của bác vào đây
-DISCORD_TOKEN = "DÁN_DISCORD_BOT_TOKEN_VÀO_ĐÂY"
+DISCORD_TOKEN = "MTUzNTk5NDI1NjI5NTA3NTk1MQ.Gmz2tS.bcvW-hhi14uvi0ZGOwvXkJdqB1dXkzxleHgAgQ"
 
 # Thời gian Mute phạt (Ví dụ: 5 phút)
 MUTE_DURATION_MINUTES = 5 
