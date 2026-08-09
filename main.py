@@ -38,7 +38,6 @@ BAD_WORDS = [
     r"\bcon chó\b", r"\bsúc vật\b", r"\bngu học\b", r"\bđồ ngu\b"
 ]
 # Tạo client Groq an toàn
-# Tạo client Groq an toàn
 groq_client = None
 if GROQ_API_KEY:
     try:
@@ -46,13 +45,12 @@ if GROQ_API_KEY:
     except Exception as e:
         print(f"⚠️ Không thể khởi tạo Groq: {e}")
 else:
-    print("⚠️ GROQ_API_KEY chưa được cài đặt trong Environment!")
-        print(f"⚠️ Không thể kết nối Groq: {e}")
+    print("⚠️ GROQ_API_KEY chưa được cài đặt!")
+
 intents = discord.Intents.default()
 intents.message_content = True
 intents.members = True
 bot = commands.Bot(command_prefix="!", intents=intents)
-
 @bot.event
 async def on_ready():
     print(f"🤖 AI Bot + AutoMod đã online: {bot.user}")
